@@ -39,8 +39,39 @@
     quick-tap-ms = <0>;
 };
 
-// AML クリックしたときにタイムアウトを延長
+&trackball {
+    // automouse-layer = <1>;
 
+    scroll-layers = <9>;
+
+    arrows {
+        layers = <3>;
+        bindings =
+            <&kp RIGHT_ARROW>,
+            <&kp LEFT_ARROW>,
+            <&kp UP_ARROW>,
+            <&kp DOWN_ARROW>;
+
+        tick = <60>;
+        wait-ms = <50>;
+        tap-ms = <5>;
+    };
+
+    arrows_iOS {
+        layers = <4>;
+        bindings =
+            <&kp RIGHT_ARROW>,
+            <&kp LEFT_ARROW>,
+            <&kp UP_ARROW>,
+            <&kp DOWN_ARROW>;
+
+        tick = <30>;
+        wait-ms = <10>;
+        tap-ms = <5>;
+    };
+};
+
+// AML クリックしたときにタイムアウトを延長
 &mkp_input_listener { input-processors = <&zip_temp_layer 6 10000>; };
 
 / {
@@ -454,10 +485,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                 &kp T                       &kp Y          &kp U        &kp I           &kp O            &kp P
-&kp A             &kp S         &kp D         &kp F                 &kp G                       &kp H          &kp J        &kp K           &kp L            &kp MINUS
-&kp LEFT_SHIFT    &kp Z         &kp X         &kp C                 &kp V                       &kp B          &kp N        &kp M           &lt 7 COMMA      &lt 5 PERIOD
-&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT GRAVE  &lt 2 TAB  &lt 3 SPACE      &kp BACKSPACE  &lt 0 ENTER  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt 6 SLASH
+&kp Q             &kp W         &kp E         &kp R                 &kp T                       &kp Y         &kp U           &kp I           &kp O            &kp P
+&kp A             &kp S         &kp D         &kp F                 &kp G                       &kp H         &kp J           &kp K           &kp L            &kp MINUS
+&kp LEFT_SHIFT    &kp Z         &kp X         &kp C                 &kp V                       &kp B         &kp N           &kp M           &lt 7 COMMA      &lt 5 PERIOD
+&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT GRAVE  &lt 2 TAB  &lt 3 SPACE      &lt 0 ENTER   &kp BACKSPACE   &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt 6 SLASH
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -538,6 +569,118 @@
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+    };
+
+keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+&kp Q           &kp W         &kp E         &kp R        &kp T                                    &kp Y         &kp U           &kp I           &kp O            &kp P
+&a_tab          &kp S         &kp D         &kp F        &kp G                                    &kp H         &kp J           &kp K           &kp L            &kp MINUS
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C        &kp V                                    &kp B         &kp N           &kp M           &kp COMMA        &kp PERIOD
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &LangChange  &lt 3 TAB  &lt_ScrollLayer_win 0 SPACE   &lt 5 ENTER   &kp BACKSPACE   &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt_ScrollLayer_win 0 SLASH
+            >;
+
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        iOS_default_layer {
+            bindings = <
+&kp Q           &kp W         &kp E         &kp R      &kp T                                       &kp Y        &kp U           &kp I           &kp O             &kp P
+&kp A           &kp S         &kp D         &kp F      &kp G                                       &kp H        &kp J           &kp K           &kp L             &kp MINUS
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C      &kp V                                       &kp B        &kp N           &kp M           &kp COMMA         &kp PERIOD
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp GLOBE  &lt 4 TAB  &lt_ScrollLayer_iOS 0 SPACE      &lt 6 ENTER  &kp BACKSPACE   &kp LEFT_ARROW  &kp RIGHT_ARROW   &lt_ScrollLayer_iOS 0 SLASH
+            >;
+
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        win_FUNCTION {
+            bindings = <
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                 &kp F1        &kp F2        &kp F3  &kp F4   &kp F5
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                &kp F6        &kp F7        &kp F8  &kp F9   &kp F10
+&none          &none          &none          &none          &bt BT_CLR                   &out OUT_BLE  &out OUT_USB  &none   &kp F11  &kp F12
+&none          &none          &none          &none          &kp INT5       &kp INT4      &none         &none         &none   &none    &kp INSERT
+            >;
+
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        win_SYMBOL {
+            bindings = <
+&kp QUESTION       &kp JP_DQUOTE  &kp EXCLAMATION   &kp JP_LBRACKET   &kp JP_RBRACKET                    &kp JP_YEN       &kp JP_AMPERSAND    &kp JP_PIPE         &kp MINUS            &kp JP_EQUAL
+&kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN     &kp JP_RPAREN                      &kp LS(HOME)     &mkp MB1            &kp LS(UP_ARROW)    &kp JP_PLUS          &kp SLASH
+&kp LEFT_SHIFT     &kp JP_TILDE   &kp JP_ASTERISK   &kp JP_LBRACE     &kp JP_RBRACE                      &kp LS(END)      &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &kp JP_ASTERISK
+&kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_BACKQUOTE  &kp SEMICOLON    &kp JP_COLON      &none            &none               &kp LEFT_ARROW      &kp RIGHT_ARROW      &kp JP_UNDERSCORE
+            >;
+
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        iOS_SYMBOL {
+            bindings = <
+&kp QUESTION      &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RBKT                              &kp NON_US_BACKSLASH  &kp AMPERSAND       &kp PIPE            &kp MINUS            &kp EQUAL
+&kp AT_SIGN       &kp SQT            &kp AMPERSAND    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                 &kp LS(HOME)          &mkp MB1            &kp LS(UP_ARROW)    &kp PLUS             &kp SLASH
+&kp LEFT_SHIFT    &kp TILDE          &kp ASTERISK     &kp LEFT_BRACE        &kp RIGHT_BRACE                       &kp LS(END)           &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &kp ASTERISK
+&kp LEFT_CONTROL  &kp CARET          &kp HASH         &kp GRAVE             &kp SEMICOLON          &kp COLON      &none                 &none               &kp LEFT_ARROW      &kp RIGHT_ARROW      &kp UNDERSCORE
+            >;
+
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        win_ARROW {
+            bindings = <
+&kp QUESTION       &kp JP_DQUOTE  &kp EXCLAMATION   &kp LESS_THAN     &kp GREATER_THAN                    &bt_select_0  &bt_select_1    &bt_select_2    &bt_select_3     &mkp MB4
+&kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN     &kp JP_RPAREN                       &kp LS(HOME)  &mkp MB1        &kp UP_ARROW    &mkp MB2         &mkp MB5
+&kp LEFT_SHIFT     &kp JP_TILDE   &kp JP_ASTERISK   &kp JP_LBRACE     &kp JP_RBRACE                       &kp LS(END)   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp ESC
+&kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_BACKQUOTE  &kp SEMICOLON     &kp JP_COLON      &kp LG(L)     &kp ENTER       &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp JP_UNDERSCORE
+            >;
+
+            sensor-bindings = <&rsr_vol &rsr_trans>;
+        };
+
+        iOS_ARROW {
+            bindings = <
+&none             &none         &none  &out OUT_BLE  &out OUT_USB                                           &bt_select_0         &bt_select_1    &bt_select_2    &bt_select_3     &kp LG(LEFT_BRACKET)
+&none             &none         &none  &none         &none          &none          &kp LS(LC(LEFT_ARROW))   &kp LC(LEFT_ARROW)   &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp LG(RIGHT_BRACKET)
+&kp LEFT_SHIFT    &none         &none  &none         &none          &none          &kp LS(LC(RIGHT_ARROW))  &kp LC(RIGHT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
+&kp LEFT_CONTROL  &kp LEFT_GUI  &tkp1  &kp GRAVE     &kp SEMICOLON  &kp COLON      &kp LC(LG(Q))            &kp ENTER                                                             &kp JP_UNDERSCORE
+            >;
+
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+        };
+
+        Num {
+            bindings = <
+&kp QUESTION    &kp JP_DQUOTE  &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)         &kp LC(LG(RIGHT_ARROW))                                             &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS    &kp JP_EQUAL
+&kp JP_LPAREN   &kp JP_RPAREN  &kp LG(LEFT_ARROW)      &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)      &lt 2 C_AL_CALCULATOR      &lt 2 JP_COLON  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_PLUS  &kp SLASH
+&kp LEFT_SHIFT  &kp JP_TILDE   &tkp1                   &kp LG(DOWN_ARROW)  &kp LG(E)                &kp C_AL_CALC              &kp JP_TILDE    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD   &kp JP_ASTERISK
+&kp DOLLAR      &kp CARET      &kp HASH                &kp LANG2           &kp LS(LG(S))            &tog_off 7                 &kp BACKSPACE   &kp KP_NUMBER_0                                                 &kp PERCENT
+            >;
+
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+        };
+
+        iOS_Num {
+            bindings = <
+&kp QUESTION          &kp DOUBLE_QUOTES      &iOS_PrevApp     &iOS_Show_AllWindow   &iOS_NextApp                                            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS   &kp EQUAL
+&kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &iOS_Split_Left  &iOS_Split_Up         &iOS_Split_Right      &kp LA(LG(D))      &kp COLON      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS    &kp SLASH
+&kp LEFT_SHIFT        &kp TILDE              &iOS_Minimize    &iOS_Split_Down       &iOS_FullScreen       &kp LG(H)          &kp TILDE      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD  &kp ASTERISK
+&kp DOLLAR            &kp CARET              &kp HASH         &kp LS(LG(NUMBER_4))  &kp LS(LG(NUMBER_3))  &trans             &kp BACKSPACE  &kp KP_NUMBER_0                                                &kp PERCENT
+            >;
+
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+        };
+
+        Scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
         };
     };
 };
