@@ -396,6 +396,57 @@
             cw-binding = <&kp C_VOL_DN>;
             ccw-binding = <&kp C_VOL_UP>;
         };
+
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+
+        lt_ScrollLayer_win: lt_ScrollLayer_win {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_SCROLLLAYER_WIN";
+            bindings = <&ScrollLayer_win>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        lt_ScrollLayer_iOS: lt_ScrollLayer_iOS {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_SCROLLLAYER_IOS";
+            bindings = <&ScrollLayer_iOS>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        a_tab: a_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "A_TAB";
+            bindings = <&kp A>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
+        };
+
+        LangChange: LangChange {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LANGCHANGE";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_SHIFT GRAVE>, <&kp LANG2>, <&kp LANG1>;
+        };
     };
 
     keymap {
