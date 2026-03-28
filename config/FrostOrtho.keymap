@@ -148,6 +148,217 @@
 
             label = "SCREENSHOT";
         };
+
+        tkp1: tkp1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(T) &kp R &kp N5 &kp N3 &kp LS(D) &kp EXCL &kp G &kp J &kp O>;
+            label = "TKP1";
+        };
+
+        window_close: window_close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_wait_time 500>,
+                <&macro_tap>,
+                <&kp F4>,
+                <&macro_wait_time 500>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "WINDOW_CLOSE";
+        };
+
+        bt_select_0: bt_select_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_off 1>, <&macro_wait_time 200>, <&bt BT_SEL 0>;
+
+            label = "BT_SELECT_0";
+        };
+
+        bt_select_1: bt_select_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_off 1>, <&macro_wait_time 200>, <&bt BT_SEL 1>;
+
+            label = "BT_SELECT_1";
+        };
+
+        bt_select_2: bt_select_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>, <&macro_wait_time 500>, <&tog_on 1>;
+
+            label = "BT_SELECT_2";
+        };
+
+        ScrollLayer_win: ScrollLayer_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_on 7>,
+                <&macro_wait_time 100>,
+                <&tog_on 9>,
+                <&macro_pause_for_release>,
+                <&tog_off 7>,
+                <&macro_wait_time 100>,
+                <&tog_off 9>;
+
+            label = "SCROLLLAYER_WIN";
+        };
+
+        ScrollLayer_iOS: ScrollLayer_iOS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_on 8>,
+                <&macro_wait_time 100>,
+                <&tog_on 9>,
+                <&macro_pause_for_release>,
+                <&tog_off 8>,
+                <&macro_wait_time 100>,
+                <&tog_off 9>;
+
+            label = "SCROLLLAYER_IOS";
+        };
+
+        iOS_FullScreen: iOS_FullScreen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp GLOBE>,
+                <&macro_tap>,
+                <&kp F>,
+                <&macro_release>,
+                <&kp GLOBE>;
+
+            label = "IOS_FULLSCREEN";
+        };
+
+        iOS_Minimize: iOS_Minimize {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp GLOBE>,
+                <&macro_tap>,
+                <&kp M>,
+                <&macro_release>,
+                <&kp GLOBE>;
+
+            label = "IOS_MINIMIZE";
+        };
+
+        iOS_Split_Left: iOS_Split_Left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp GLOBE>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LCTRL &kp GLOBE>;
+
+            label = "IOS_SPLIT_LEFT";
+        };
+
+        iOS_Split_Right: iOS_Split_Right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp GLOBE>,
+                <&macro_tap>,
+                <&kp RIGHT_ARROW>,
+                <&macro_release>,
+                <&kp LCTRL &kp GLOBE>;
+
+            label = "IOS_SPLIT_RIGHT";
+        };
+
+        iOS_Split_Up: iOS_Split_Up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp GLOBE>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_release>,
+                <&kp LCTRL &kp GLOBE>;
+
+            label = "IOS_SPLIT_UP";
+        };
+
+        iOS_Split_Down: iOS_Split_Down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp GLOBE>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_release>,
+                <&kp LCTRL &kp GLOBE>;
+
+            label = "IOS_SPLIT_DOWN";
+        };
+
+        iOS_Show_AllWindow: iOS_Show_AllWindow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp GLOBE>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_release>,
+                <&kp GLOBE>;
+
+            label = "IOS_SHOW_ALLWINDOW";
+        };
+
+        iOS_NextApp: iOS_NextApp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp GLOBE>,
+                <&macro_tap>,
+                <&kp RIGHT_ARROW>,
+                <&macro_release>,
+                <&kp GLOBE>;
+
+            label = "IOS_NEXTAPP";
+        };
+
+        iOS_PrevApp: iOS_PrevApp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp GLOBE>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp GLOBE>;
+
+            label = "IOS_PREVAPP";
+        };
+
+        bt_select_3: bt_select_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_off 1>, <&macro_wait_time 200>, <&bt BT_SEL 3>;
+
+            label = "BT_SELECT_3";
+        };
     };
 
     behaviors {
