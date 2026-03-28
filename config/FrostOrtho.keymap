@@ -159,6 +159,11 @@
             bindings = <&kp ENTER>;
             key-positions = <42 19 29 40>;
         };
+
+        lt_function {
+            bindings = <&mo 2>;
+            key-positions = <39 38>;
+        };
     };
 
     macros {
@@ -487,10 +492,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W         &kp E         &kp R        &kp T                                       &kp Y        &kp U          &kp I           &kp O            &kp P
-&a_tab          &kp S         &kp D         &kp F        &kp G                                       &kp H        &kp J          &kp K           &kp L            &kp MINUS
-&kp LEFT_SHIFT  &kp Z         &kp X         &kp C        &kp V                                       &kp B        &kp N          &kp M           &kp COMMA        &kp PERIOD
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &LangChange  &lt 3 TAB  &lt_ScrollLayer_win 0 SPACE      &lt 5 ENTER  &kp BACKSPACE  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt_ScrollLayer_win 0 SLASH
+&kp Q           &kp W         &kp E         &kp R        &kp T                                       &kp Y          &kp U        &kp I           &kp O            &kp P
+&a_tab          &kp S         &kp D         &kp F        &kp G                                       &kp H          &kp J        &kp K           &kp L            &kp MINUS
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C        &kp V                                       &kp B          &kp N        &kp M           &kp COMMA        &kp PERIOD
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &LangChange  &lt 3 TAB  &lt_ScrollLayer_win 0 SPACE      &kp BACKSPACE  &lt 5 ENTER  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt_ScrollLayer_win 0 SLASH
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -498,10 +503,10 @@
 
         iOS_default_layer {
             bindings = <
-&kp Q           &kp W         &kp E         &kp R      &kp T                                       &kp Y        &kp U          &kp I           &kp O            &kp P
-&kp A           &kp S         &kp D         &kp F      &kp G                                       &kp H        &kp J          &kp K           &kp L            &kp MINUS
-&kp LEFT_SHIFT  &kp Z         &kp X         &kp C      &kp V                                       &kp B        &kp N          &kp M           &kp COMMA        &kp PERIOD
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp GLOBE  &lt 4 TAB  &lt_ScrollLayer_iOS 0 SPACE      &lt 6 ENTER  &kp BACKSPACE  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt_ScrollLayer_iOS 0 SLASH
+&kp Q           &kp W         &kp E         &kp R      &kp T                                       &kp Y          &kp U        &kp I           &kp O            &kp P
+&kp A           &kp S         &kp D         &kp F      &kp G                                       &kp H          &kp J        &kp K           &kp L            &kp MINUS
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C      &kp V                                       &kp B          &kp N        &kp M           &kp COMMA        &kp PERIOD
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp GLOBE  &lt 4 TAB  &lt_ScrollLayer_iOS 0 SPACE      &kp BACKSPACE  &lt 6 ENTER  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt_ScrollLayer_iOS 0 SLASH
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -545,7 +550,7 @@
 &kp QUESTION       &kp JP_DQUOTE  &kp EXCLAMATION   &kp LESS_THAN     &kp GREATER_THAN                    &bt_select_0  &bt_select_1    &bt_select_2    &bt_select_3     &mkp MB4
 &kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN     &kp JP_RPAREN                       &kp LS(HOME)  &mkp MB1        &kp UP_ARROW    &mkp MB2         &mkp MB5
 &kp LEFT_SHIFT     &kp JP_TILDE   &kp JP_ASTERISK   &kp JP_LBRACE     &kp JP_RBRACE                       &kp LS(END)   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp ESC
-&kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_BACKQUOTE  &kp SEMICOLON     &kp JP_COLON      &none         &kp LG(L)       &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp JP_UNDERSCORE
+&kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_BACKQUOTE  &kp SEMICOLON     &kp JP_COLON      &kp LG(L)     &kp LG(L)       &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -556,7 +561,7 @@
 &none             &none         &none  &out OUT_BLE  &out OUT_USB                  &bt_select_0         &bt_select_1    &bt_select_2    &bt_select_3     &kp LG(LEFT_BRACKET)
 &none             &none         &none  &none         &none                         &kp LC(LEFT_ARROW)   &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp LG(RIGHT_BRACKET)
 &kp LEFT_SHIFT    &none         &none  &none         &none                         &kp LC(RIGHT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
-&kp LEFT_CONTROL  &kp LEFT_GUI  &tkp1  &kp GRAVE     &kp SEMICOLON  &kp COLON      &none                &kp LC(LG(Q))   &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp JP_UNDERSCORE
+&kp LEFT_CONTROL  &kp LEFT_GUI  &tkp1  &kp GRAVE     &kp SEMICOLON  &kp COLON      &kp LC(LG(Q))        &kp LC(LG(Q))   &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
@@ -567,7 +572,7 @@
 &kp QUESTION    &kp JP_DQUOTE  &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)         &kp LC(LG(RIGHT_ARROW))                  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS        &kp JP_EQUAL
 &kp JP_LPAREN   &kp JP_RPAREN  &kp LG(LEFT_ARROW)      &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)                      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_PLUS      &kp SLASH
 &kp LEFT_SHIFT  &kp JP_TILDE   &tkp1                   &kp LG(DOWN_ARROW)  &kp LG(E)                                &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp JP_ASTERISK
-&kp DOLLAR      &kp CARET      &kp HASH                &kp LANG2           &kp LS(LG(S))            &tog_off 7      &kp KP_N0        &kp BACKSPACE    &kp LEFT_ARROW   &kp RIGHT_ARROW  &kp PERCENT
+&kp DOLLAR      &kp CARET      &kp HASH                &kp LANG2           &kp LS(LG(S))            &tog_off 7      &kp BACKSPACE    &kp KP_N0        &kp LEFT_ARROW   &kp RIGHT_ARROW  &kp PERCENT
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
@@ -578,7 +583,7 @@
 &kp QUESTION          &kp DOUBLE_QUOTES      &iOS_PrevApp     &iOS_Show_AllWindow   &iOS_NextApp                      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS   &kp EQUAL
 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &iOS_Split_Left  &iOS_Split_Up         &iOS_Split_Right                  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS    &kp SLASH
 &kp LEFT_SHIFT        &kp TILDE              &iOS_Minimize    &iOS_Split_Down       &iOS_FullScreen                   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD  &kp ASTERISK
-&kp DOLLAR            &kp CARET              &kp HASH         &kp LS(LG(NUMBER_4))  &kp LS(LG(NUMBER_3))  &trans      &kp KP_N0        &kp BACKSPACE    &kp PERCENT
+&kp DOLLAR            &kp CARET              &kp HASH         &kp LS(LG(NUMBER_4))  &kp LS(LG(NUMBER_3))  &trans      &kp BACKSPACE    &kp KP_N0        &kp PERCENT
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
