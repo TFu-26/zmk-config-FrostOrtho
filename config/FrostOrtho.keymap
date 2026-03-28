@@ -545,10 +545,10 @@
 
         win_SYMBOL {
             bindings = <
-&kp QUESTION       &kp JP_DQUOTE  &kp EXCLAMATION   &kp JP_LBRACKET   &kp JP_RBRACKET                    &kp JP_YEN      &kp JP_AMPERSAND    &kp JP_PIPE         &kp MINUS            &kp JP_EQUAL
-&kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN     &kp JP_RPAREN                      &kp LS(HOME)    &mkp MB1            &kp LS(UP_ARROW)    &kp JP_PLUS          &kp SLASH
-&kp LEFT_SHIFT     &kp JP_TILDE   &kp JP_ASTERISK   &kp JP_LBRACE     &kp JP_RBRACE                      &kp LS(END)     &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &kp JP_ASTERISK
-&kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_BACKQUOTE  &kp SEMICOLON    &kp JP_COLON      &kp DOWN_ARROW  &kp UP_ARROW        &kp LEFT_ARROW      &kp RIGHT_ARROW      &kp JP_UNDERSCORE
+&kp QUESTION       &kp JP_DQUOTE  &kp EXCLAMATION   &kp JP_LBRACKET   &kp JP_RBRACKET                    &kp JP_YEN    &kp JP_AMPERSAND    &kp JP_PIPE         &kp MINUS            &kp JP_EQUAL
+&kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN     &kp JP_RPAREN                      &kp LS(HOME)  &mkp MB1            &kp LS(UP_ARROW)    &kp JP_PLUS          &kp SLASH
+&kp LEFT_SHIFT     &kp JP_TILDE   &kp JP_ASTERISK   &kp JP_LBRACE     &kp JP_RBRACE                      &kp LS(END)   &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &kp JP_ASTERISK
+&kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_BACKQUOTE  &kp SEMICOLON    &kp JP_COLON      &kp UP_ARROW  &kp DOWN_ARROW      &kp LEFT_ARROW      &kp RIGHT_ARROW      &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -558,8 +558,8 @@
             bindings = <
 &kp QUESTION      &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RBKT                              &kp NON_US_BACKSLASH  &kp AMPERSAND       &kp PIPE            &kp MINUS            &kp EQUAL
 &kp AT_SIGN       &kp SQT            &kp AMPERSAND    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                 &kp LS(HOME)          &mkp MB1            &kp LS(UP_ARROW)    &kp PLUS             &kp SLASH
-&kp LEFT_SHIFT    &kp TILDE          &kp ASTERISK     &kp LEFT_BRACE        &kp RIGHT_BRACE                       &kp LS(END)           &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &kp ASTERISK
-&kp LEFT_CONTROL  &kp CARET          &kp HASH         &kp GRAVE             &kp SEMICOLON          &kp COLON      &kp DOWN_ARROW        &kp UP_ARROW        &kp LEFT_ARROW      &kp RIGHT_ARROW      &kp UNDERSCORE
+&kp LEFT_SHIFT    &kp TILDE          &kp GRAVE        &kp LEFT_BRACE        &kp RIGHT_BRACE                       &kp LS(END)           &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &kp ASTERISK
+&kp LEFT_CONTROL  &kp CARET          &kp HASH         &kp ASTERISK          &kp SEMICOLON          &kp COLON      &kp UP_ARROW          &kp DOWN_ARROW      &kp LEFT_ARROW      &kp RIGHT_ARROW      &kp UNDERSCORE
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -578,10 +578,10 @@
 
         iOS_ARROW {
             bindings = <
-&none             &none         &none  &out OUT_BLE  &out OUT_USB                  &bt_select_0         &bt_select_1    &bt_select_2    &bt_select_3     &kp LG(LEFT_BRACKET)
-&none             &none         &none  &none         &none                         &kp LC(LEFT_ARROW)   &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp LG(RIGHT_BRACKET)
-&kp LEFT_SHIFT    &none         &none  &none         &none                         &kp LC(RIGHT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
-&kp LEFT_CONTROL  &kp LEFT_GUI  &tkp1  &kp GRAVE     &kp SEMICOLON  &kp COLON      &kp LC(LG(Q))        &kp LC(LG(Q))   &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp JP_UNDERSCORE
+&none             &none         &none     &out OUT_BLE  &out OUT_USB                  &bt_select_0         &bt_select_1    &bt_select_2    &bt_select_3     &kp LG(LEFT_BRACKET)
+&none             &none         &none     &none         &none                         &kp LC(LEFT_ARROW)   &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp LG(RIGHT_BRACKET)
+&kp LEFT_SHIFT    &none         &none     &none         &none                         &kp LC(RIGHT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
+&kp LEFT_CONTROL  &kp LEFT_GUI  &kp HASH  &kp ASTERISK  &kp SEMICOLON  &kp COLON      &kp LC(LG(Q))        &kp LC(LG(Q))   &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
