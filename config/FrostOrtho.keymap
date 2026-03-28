@@ -9,6 +9,7 @@
 #define MOUSE 6
 
 // OS設定を日本語キーボードのまま使用するための変換定義
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -63,12 +64,12 @@
 
         Left_Click {
             bindings = <&mkp MB1>;
-            key-positions = <18 19>;
+            key-positions = <15 16>;
         };
 
         Right_Click {
             bindings = <&mkp MB2>;
-            key-positions = <20 19>;
+            key-positions = <16 17>;
         };
 
         comboDELL {
@@ -83,12 +84,7 @@
 
         Underbar {
             bindings = <&kp JP_UNDERSCORE>;
-            key-positions = <27 26>;
-        };
-
-        Pipe {
-            bindings = <&kp JP_PIPE>;
-            key-positions = <13 3>;
+            key-positions = <24 23 24>;
         };
 
         WindowClose {
@@ -98,27 +94,22 @@
 
         ContextMenu {
             bindings = <&kp K_CONTEXT_MENU>;
-            key-positions = <31 32>;
+            key-positions = <28 27>;
         };
 
         Home {
             bindings = <&kp HOME>;
-            key-positions = <17 18 16>;
+            key-positions = <17 16 15>;
         };
 
         End {
             bindings = <&kp END>;
-            key-positions = <30 29 28>;
+            key-positions = <30 25 26 27>;
         };
 
         Equal {
             bindings = <&kp JP_EQUAL>;
-            key-positions = <26 25>;
-        };
-
-        percent {
-            bindings = <&kp PERCENT>;
-            key-positions = <14 13>;
+            key-positions = <14 24>;
         };
 
         colon {
@@ -126,34 +117,14 @@
             key-positions = <14 4>;
         };
 
-        semicolon {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <14 26>;
-        };
-
         mb3 {
             bindings = <&mkp MB3>;
-            key-positions = <20 19 18>;
+            key-positions = <15 16 17>;
         };
 
         comboEnter {
             bindings = <&kp ENTER>;
-            key-positions = <33 42>;
-        };
-
-        Asterisk {
-            bindings = <&kp JP_ASTERISK>;
-            key-positions = <13 25>;
-        };
-
-        doublequote {
-            bindings = <&kp JP_DQUOTE>;
-            key-positions = <24 12>;
-        };
-
-        single_quote {
-            bindings = <&kp JP_QUOTE>;
-            key-positions = <23 11>;
+            key-positions = <42 19 29 40>;
         };
     };
 
