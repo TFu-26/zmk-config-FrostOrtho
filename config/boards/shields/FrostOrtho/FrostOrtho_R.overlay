@@ -41,6 +41,16 @@
     };
 };
 
+&trackball_listener {
+    scroller {
+        layers = <9>; // スクロールレイヤー
+        input-processors = <
+            &zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT) // スクロール方向調整
+            &zip_xy_to_scroll_mapper
+        >;
+    };
+};
+
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
