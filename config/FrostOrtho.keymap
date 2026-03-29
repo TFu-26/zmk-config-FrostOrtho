@@ -490,7 +490,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "MOUSESCROLL";
             #sensor-binding-cells = <0>;
-            bindings = <&msc MOVE_Y(10)>, <&msc MOVE_Y(-10)>;
+            bindings = <&kp C_AC_SCROLL_UP>, <&kp C_AC_SCROLL_DOWN>;
         };
     };
 
