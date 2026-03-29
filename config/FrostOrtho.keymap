@@ -90,11 +90,6 @@
             key-positions = <1 2>;
         };
 
-        Fn5 {
-            bindings = <&kp F5>;
-            key-positions = <3 4>;
-        };
-
         Left_Click {
             bindings = <&mkp MB1>;
             key-positions = <15 16>;
