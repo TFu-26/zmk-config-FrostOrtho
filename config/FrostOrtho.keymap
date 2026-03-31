@@ -125,16 +125,6 @@
             key-positions = <28 27>;
         };
 
-        Home {
-            bindings = <&kp HOME>;
-            key-positions = <16 15>;
-        };
-
-        End {
-            bindings = <&kp END>;
-            key-positions = <25 26>;
-        };
-
         mb3 {
             bindings = <&mkp MB3>;
             key-positions = <15 16 17>;
@@ -147,7 +137,7 @@
 
         escapeRightSide {
             bindings = <&kp ESC>;
-            key-positions = <36 37>;
+            key-positions = <40 39 38>;
             layers = <0>;
         };
     };
@@ -523,7 +513,7 @@
             bindings = <
 &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                 &kp F1        &kp F2        &kp F3  &kp F4   &kp F5
 &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4                &kp F6        &kp F7        &kp F8  &kp F9   &kp F10
-&none          &none          &none          &none          &bt BT_CLR                   &out OUT_BLE  &out OUT_USB  &none   &kp F11  &kp F12
+&tog_off 1     &tog_on 1      &none          &none          &bt BT_CLR                   &out OUT_BLE  &out OUT_USB  &none   &kp F11  &kp F12
 &none          &none          &none          &none          &kp INT5       &kp INT4      &none         &none         &none   &none    &kp INSERT
             >;
 
@@ -535,7 +525,7 @@
 &kp QUESTION       &kp JP_DQUOTE  &kp EXCLAMATION   &kp JP_LBRACKET  &kp JP_RBRACKET                    &kp JP_YEN    &kp JP_AMPERSAND    &kp JP_PIPE         &kp MINUS            &kp JP_EQUAL
 &kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN    &kp JP_RPAREN                      &kp LS(HOME)  &mkp MB1            &kp LS(UP_ARROW)    &kp JP_PLUS          &kp SLASH
 &kp LEFT_SHIFT     &kp JP_TILDE   &kp JP_BACKQUOTE  &kp JP_LBRACE    &kp JP_RBRACE                      &kp LS(END)   &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &kp JP_ASTERISK
-&kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_ASTERISK  &kp SEMICOLON    &kp JP_COLON      &kp UP_ARROW  &kp DOWN_ARROW      &kp LEFT_ARROW      &kp RIGHT_ARROW      &kp JP_UNDERSCORE
+&kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_ASTERISK  &kp SEMICOLON    &kp JP_COLON      &kp UP_ARROW  &kp DOWN_ARROW      &kp HOME            &kp END              &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -557,7 +547,7 @@
 &kp QUESTION       &kp JP_DQUOTE  &kp EXCLAMATION   &kp LESS_THAN    &kp GREATER_THAN                    &bt_select_0  &bt_select_1    &bt_select_2    &bt_select_3     &mkp MB4
 &kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN    &kp JP_RPAREN                       &kp LS(HOME)  &mkp MB1        &kp UP_ARROW    &mkp MB2         &mkp MB5
 &kp LEFT_SHIFT     &kp JP_TILDE   &kp JP_BACKQUOTE  &kp JP_LBRACE    &kp JP_RBRACE                       &kp LS(END)   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp ESC
-&kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_ASTERISK  &kp SEMICOLON     &kp JP_COLON      &kp LG(L)     &kp LG(L)       &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp JP_UNDERSCORE
+&kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_ASTERISK  &kp SEMICOLON     &kp JP_COLON      &kp LG(L)     &kp LG(L)       &kp HOME        &kp END          &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
