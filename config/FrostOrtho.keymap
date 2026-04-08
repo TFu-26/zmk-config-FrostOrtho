@@ -159,6 +159,11 @@
             bindings = <&kp DOWN_ARROW>;
             key-positions = <39 38>;
         };
+
+        ltFunction {
+            bindings = <&mo 2>;
+            key-positions = <31 32>;
+        };
     };
 
     macros {
@@ -498,10 +503,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W         &kp E         &kp R        &kp T                                       &kp Y        &kp U          &kp I           &kp O            &kp P
-&a_tab          &kp S         &kp D         &kp F        &kp G                                       &kp H        &kp J          &kp K           &kp L            &kp MINUS
-&kp LEFT_SHIFT  &kp Z         &kp X         &kp C        &kp V                                       &kp B        &kp N          &kp M           &kp COMMA        &kp PERIOD
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &LangChange  &lt 3 TAB  &lt_ScrollLayer_win 0 SPACE      &lt 5 ENTER  &kp BACKSPACE  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt_ScrollLayer_win 0 SLASH
+&kp Q           &kp W         &kp E         &kp R        &kp T                                       &kp Y          &kp U        &kp I           &kp O            &kp P
+&a_tab          &kp S         &kp D         &kp F        &kp G                                       &kp H          &kp J        &kp K           &kp L            &kp MINUS
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C        &kp V                                       &kp B          &kp N        &kp M           &kp COMMA        &kp PERIOD
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &LangChange  &lt 3 TAB  &lt_ScrollLayer_win 0 SPACE      &kp BACKSPACE  &lt 5 ENTER  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt_ScrollLayer_win 0 SLASH
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -509,10 +514,10 @@
 
         iOS_default_layer {
             bindings = <
-&kp Q           &kp W         &kp E         &kp R      &kp T                                       &kp Y        &kp U          &kp I           &kp O            &kp P
-&kp A           &kp S         &kp D         &kp F      &kp G                                       &kp H        &kp J          &kp K           &kp L            &kp MINUS
-&kp LEFT_SHIFT  &kp Z         &kp X         &kp C      &kp V                                       &kp B        &kp N          &kp M           &kp COMMA        &kp PERIOD
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp GLOBE  &lt 4 TAB  &lt_ScrollLayer_iOS 0 SPACE      &lt 6 ENTER  &kp BACKSPACE  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt_ScrollLayer_iOS 0 SLASH
+&kp Q           &kp W         &kp E         &kp R      &kp T                                       &kp Y          &kp U        &kp I           &kp O            &kp P
+&kp A           &kp S         &kp D         &kp F      &kp G                                       &kp H          &kp J        &kp K           &kp L            &kp MINUS
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C      &kp V                                       &kp B          &kp N        &kp M           &kp COMMA        &kp PERIOD
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp GLOBE  &lt 4 TAB  &lt_ScrollLayer_iOS 0 SPACE      &kp BACKSPACE  &lt 6 ENTER  &kp LEFT_ARROW  &kp RIGHT_ARROW  &lt_ScrollLayer_iOS 0 SLASH
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
