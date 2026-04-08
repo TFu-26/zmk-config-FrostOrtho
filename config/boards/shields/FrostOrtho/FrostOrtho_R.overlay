@@ -1,53 +1,23 @@
 #include "FrostOrtho.dtsi"
-#include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
-#include <zephyr/dt-bindings/input/input-event-codes.h>
-#include <input/processors/runtime-input-processor.dtsi>
-#include <behaviors/battery_history_request.dtsi>
-
 &default_transform {
     col-offset = <6>;
 };
 
 &kscan0 {
-    col-gpios
-        = <&xiao_d 10 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 9 GPIO_ACTIVE_HIGH> 
-        , <&xiao_d 8 GPIO_ACTIVE_HIGH> 
-        , <&xiao_d 7 GPIO_ACTIVE_HIGH> 
-        , <&gpio0 10 GPIO_ACTIVE_HIGH>
-        ;
-};
-
-// AMLから離脱しないキー
-&zip_temp_layer {
-    require-prior-idle-ms = <200>;
-    excluded-positions = <
-        16 // J 左クリック
-        17 // K 左クリック
-        18 // L 左クリック
-        20 // Z Shift
-        30 // Control
-        32 // Alt
-    >;
+        col-gpios
+            = <&xiao_d 10 GPIO_ACTIVE_HIGH>
+            , <&xiao_d 9 GPIO_ACTIVE_HIGH>
+            , <&xiao_d 8 GPIO_ACTIVE_HIGH>
+            , <&xiao_d 7 GPIO_ACTIVE_HIGH>
+            , <&gpio0 10 GPIO_ACTIVE_HIGH>
+            ;
 };
 
 / {
-    trackball_listener: trackball_listener {
+    trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        // input-processors = <&mouse_runtime_input_processor>;
-    };
-};
-
-&trackball_listener {
-    scroller {
-        layers = <9>; // スクロールレイヤー
-        input-processors = <
-            &zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT) // スクロール方向調整
-            &zip_xy_to_scroll_mapper
-        >;
     };
 };
 
@@ -70,6 +40,8 @@
     };
 };
 
+&xiao_serial { status = "disabled"; };
+
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
@@ -84,9 +56,5 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        // automouse-layer = <6>;
-        // scroll-layers = <5>;
     };
 };
-
-
