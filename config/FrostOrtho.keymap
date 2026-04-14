@@ -152,6 +152,16 @@
             bindings = <&mo 2>;
             key-positions = <31 32>;
         };
+
+        Left_Click2 {
+            bindings = <&mkp MB1>;
+            key-positions = <15 16>;
+        };
+
+        Right_Click2 {
+            bindings = <&mkp MB2>;
+            key-positions = <16 17>;
+        };
     };
 
     macros {
