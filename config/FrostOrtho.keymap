@@ -84,12 +84,12 @@
 
         Left_Click {
             bindings = <&mkp MB1>;
-            key-positions = <15 16>;
+            key-positions = <5 6>;
         };
 
         Right_Click {
             bindings = <&mkp MB2>;
-            key-positions = <16 17>;
+            key-positions = <6 7>;
         };
 
         comboDELL {
@@ -99,12 +99,7 @@
 
         ctrlQ {
             bindings = <&kp LC(Q)>;
-            key-positions = <6 7>;
-        };
-
-        Underbar {
-            bindings = <&kp JP_UNDERSCORE>;
-            key-positions = <24 23 24>;
+            key-positions = <17 16>;
         };
 
         WindowClose {
@@ -119,17 +114,17 @@
 
         mb3 {
             bindings = <&mkp MB3>;
-            key-positions = <15 16 17>;
+            key-positions = <7 6 5>;
         };
 
         lt_function {
             bindings = <&mo 2>;
-            key-positions = <39 38 28 27>;
+            key-positions = <25 36>;
         };
 
         escapeRightSide {
             bindings = <&kp ESC>;
-            key-positions = <25 26 27>;
+            key-positions = <17 16 15>;
             layers = <0>;
         };
 
