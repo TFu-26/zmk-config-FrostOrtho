@@ -162,6 +162,12 @@
             bindings = <&mkp MB2>;
             key-positions = <16 17>;
         };
+
+        escapeRightSide2 {
+            bindings = <&kp ESC>;
+            key-positions = <25 26 27>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -395,6 +401,19 @@
 
             label = "BT_SELECT_3";
         };
+
+        OCMD: OCMD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(R)>,
+                <&macro_wait_time 200>,
+                <&kp C &kp M &kp D>,
+                <&macro_wait_time 200>,
+                <&kp ENTER>;
+
+            label = "OCMD";
+        };
     };
 
     behaviors {
@@ -535,7 +554,7 @@
         win_SYMBOL {
             bindings = <
 &kp QUESTION       &kp JP_DQUOTE  &kp EXCLAMATION   &kp JP_LBRACKET  &kp JP_RBRACKET                    &kp JP_YEN    &kp JP_AMPERSAND    &kp JP_PIPE         &kp MINUS            &kp JP_EQUAL
-&kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN    &kp JP_RPAREN                      &kp LS(HOME)  &mkp MB1            &kp LS(UP_ARROW)    &kp JP_PLUS          &kp SLASH
+&kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN    &kp JP_RPAREN                      &kp LS(HOME)  &kp INSERT          &kp LS(UP_ARROW)    &kp JP_PLUS          &kp SLASH
 &kp LEFT_SHIFT     &kp JP_TILDE   &kp JP_BACKQUOTE  &kp JP_LBRACE    &kp JP_RBRACE                      &kp LS(END)   &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &kp JP_ASTERISK
 &kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_ASTERISK  &kp SEMICOLON    &kp JP_COLON      &kp UP_ARROW  &kp DOWN_ARROW      &kp LEFT_ARROW      &kp RIGHT_ARROW      &kp JP_UNDERSCORE
             >;
@@ -546,7 +565,7 @@
         iOS_SYMBOL {
             bindings = <
 &kp QUESTION      &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RBKT                              &kp NON_US_BACKSLASH  &kp AMPERSAND       &kp PIPE            &kp MINUS            &kp EQUAL
-&kp AT_SIGN       &kp SQT            &kp AMPERSAND    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                 &kp LS(HOME)          &mkp MB1            &kp LS(UP_ARROW)    &kp PLUS             &kp SLASH
+&kp AT_SIGN       &kp SQT            &kp AMPERSAND    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                 &kp LS(HOME)          &kp INSERT          &kp LS(UP_ARROW)    &kp PLUS             &kp SLASH
 &kp LEFT_SHIFT    &kp TILDE          &kp GRAVE        &kp LEFT_BRACE        &kp RIGHT_BRACE                       &kp LS(END)           &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &kp ASTERISK
 &kp LEFT_CONTROL  &kp CARET          &kp HASH         &kp ASTERISK          &kp SEMICOLON          &kp COLON      &kp UP_ARROW          &kp DOWN_ARROW      &kp LEFT_ARROW      &kp RIGHT_ARROW      &kp UNDERSCORE
             >;
@@ -557,8 +576,8 @@
         win_ARROW {
             bindings = <
 &kp QUESTION       &kp JP_DQUOTE  &kp EXCLAMATION   &kp LESS_THAN    &kp GREATER_THAN                    &bt_select_0  &bt_select_1    &bt_select_2    &bt_select_3     &mkp MB4
-&kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN    &kp JP_RPAREN                       &kp LS(HOME)  &mkp MB1        &kp UP_ARROW    &mkp MB2         &mkp MB5
-&kp LEFT_SHIFT     &kp JP_TILDE   &kp JP_BACKQUOTE  &kp JP_LBRACE    &kp JP_RBRACE                       &kp LS(END)   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp ESC
+&kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN    &kp JP_RPAREN                       &kp LS(HOME)  &kp HOME        &kp UP_ARROW    &kp END          &mkp MB5
+&kp LEFT_SHIFT     &kp JP_TILDE   &kp JP_BACKQUOTE  &kp JP_LBRACE    &kp JP_RBRACE                       &kp LS(END)   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(LA(N))
 &kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_ASTERISK  &kp SEMICOLON     &kp JP_COLON      &kp LG(L)     &kp LG(L)       &kp HOME        &kp END          &kp JP_UNDERSCORE
             >;
 
@@ -579,7 +598,7 @@
         Num {
             bindings = <
 &kp QUESTION    &kp JP_DQUOTE  &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)         &kp LC(LG(RIGHT_ARROW))                  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS     &kp JP_EQUAL
-&kp JP_LPAREN   &kp JP_RPAREN  &kp LG(LEFT_ARROW)      &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)                      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_PLUS   &kp SLASH
+&kp AT          &OCMD          &kp LG(LEFT_ARROW)      &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)                      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_PLUS   &kp SLASH
 &kp LEFT_SHIFT  &kp JP_TILDE   &tkp1                   &kp LG(DOWN_ARROW)  &kp LG(E)                                &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp JP_ASTERISK
 &kp DOLLAR      &kp CARET      &kp HASH                &kp LANG2           &kp LS(LG(S))            &tog_off 7      &kp KP_N0        &kp PERIOD       &kp JP_COLON     &kp JP_TILDE  &kp PERCENT
             >;
