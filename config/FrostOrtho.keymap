@@ -491,6 +491,8 @@
             label = "LANGCHANGE";
             #binding-cells = <0>;
             bindings = <&kp LANG2>, <&kp LANG1>;
+
+            tapping-term-ms = <500>;
         };
 
         backspace_lt_win: backspace_lt_win {
