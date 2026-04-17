@@ -407,9 +407,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(R)>,
-                <&macro_wait_time 200>,
+                <&macro_wait_time 800>,
                 <&kp C &kp M &kp D>,
-                <&macro_wait_time 200>,
+                <&macro_wait_time 800>,
                 <&kp ENTER>;
 
             label = "OCMD";
@@ -490,7 +490,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LANGCHANGE";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_SHIFT GRAVE>, <&kp LANG2>, <&kp LANG1>;
+            bindings = <&kp LANG2>, <&kp LANG1>;
         };
 
         backspace_lt_win: backspace_lt_win {
@@ -554,7 +554,7 @@
         win_SYMBOL {
             bindings = <
 &kp QUESTION       &kp JP_DQUOTE  &kp EXCLAMATION   &kp JP_LBRACKET  &kp JP_RBRACKET                    &kp JP_YEN    &kp JP_AMPERSAND    &kp JP_PIPE         &kp MINUS            &kp JP_EQUAL
-&kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN    &kp JP_RPAREN                      &kp LS(HOME)  &kp INSERT          &kp LS(UP_ARROW)    &kp JP_PLUS          &kp SLASH
+&kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN    &kp JP_RPAREN                      &kp LS(HOME)  &LangChange         &kp LS(UP_ARROW)    &kp JP_PLUS          &kp SLASH
 &kp LEFT_SHIFT     &kp JP_TILDE   &kp JP_BACKQUOTE  &kp JP_LBRACE    &kp JP_RBRACE                      &kp LS(END)   &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &kp JP_ASTERISK
 &kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_ASTERISK  &kp SEMICOLON    &kp JP_COLON      &kp UP_ARROW  &kp DOWN_ARROW      &kp LEFT_ARROW      &kp RIGHT_ARROW      &kp JP_UNDERSCORE
             >;
@@ -565,7 +565,7 @@
         iOS_SYMBOL {
             bindings = <
 &kp QUESTION      &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RBKT                              &kp NON_US_BACKSLASH  &kp AMPERSAND       &kp PIPE            &kp MINUS            &kp EQUAL
-&kp AT_SIGN       &kp SQT            &kp AMPERSAND    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                 &kp LS(HOME)          &kp INSERT          &kp LS(UP_ARROW)    &kp PLUS             &kp SLASH
+&kp AT_SIGN       &kp SQT            &kp AMPERSAND    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                 &kp LS(HOME)          &kp GLOBE           &kp LS(UP_ARROW)    &kp PLUS             &kp SLASH
 &kp LEFT_SHIFT    &kp TILDE          &kp GRAVE        &kp LEFT_BRACE        &kp RIGHT_BRACE                       &kp LS(END)           &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp LS(RIGHT_ARROW)  &kp ASTERISK
 &kp LEFT_CONTROL  &kp CARET          &kp HASH         &kp ASTERISK          &kp SEMICOLON          &kp COLON      &kp UP_ARROW          &kp DOWN_ARROW      &kp LEFT_ARROW      &kp RIGHT_ARROW      &kp UNDERSCORE
             >;
@@ -576,7 +576,7 @@
         win_ARROW {
             bindings = <
 &kp QUESTION       &kp JP_DQUOTE  &kp EXCLAMATION   &kp LESS_THAN    &kp GREATER_THAN                    &bt_select_0  &bt_select_1    &bt_select_2    &bt_select_3     &mkp MB4
-&kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN    &kp JP_RPAREN                       &kp LS(HOME)  &kp HOME        &kp UP_ARROW    &kp END          &mkp MB5
+&kp JP_AT          &kp JP_QUOTE   &kp JP_AMPERSAND  &kp JP_LPAREN    &kp JP_RPAREN                       &kp LS(HOME)  &LangChange     &kp UP_ARROW    &kp END          &mkp MB5
 &kp LEFT_SHIFT     &kp JP_TILDE   &kp JP_BACKQUOTE  &kp JP_LBRACE    &kp JP_RBRACE                       &kp LS(END)   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LG(LA(N))
 &kp JP_UNDERSCORE  &kp JP_CARET   &kp HASH          &kp JP_ASTERISK  &kp SEMICOLON     &kp JP_COLON      &kp LG(L)     &kp LG(L)       &kp HOME        &kp END          &kp JP_UNDERSCORE
             >;
@@ -587,7 +587,7 @@
         iOS_ARROW {
             bindings = <
 &none             &none         &none     &out OUT_BLE  &out OUT_USB                  &bt_select_0         &bt_select_1    &bt_select_2    &bt_select_3     &kp LG(LEFT_BRACKET)
-&none             &none         &none     &none         &none                         &kp LC(LEFT_ARROW)   &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp LG(RIGHT_BRACKET)
+&none             &none         &none     &none         &none                         &kp LC(LEFT_ARROW)   &kp GLOBE       &kp UP_ARROW    &kp C_MENU       &kp LG(RIGHT_BRACKET)
 &kp LEFT_SHIFT    &none         &none     &none         &none                         &kp LC(RIGHT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
 &kp LEFT_CONTROL  &kp LEFT_GUI  &kp HASH  &kp ASTERISK  &kp SEMICOLON  &kp COLON      &kp LC(LG(Q))        &kp LC(LG(Q))   &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp JP_UNDERSCORE
             >;
