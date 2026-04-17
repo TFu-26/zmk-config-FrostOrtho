@@ -605,9 +605,9 @@
         Num {
             bindings = <
 &kp QUESTION    &kp JP_DQUOTE  &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)         &kp LC(LG(RIGHT_ARROW))                  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS     &kp JP_EQUAL
-&kp JP_AT       &OCMD          &kp LG(LEFT_ARROW)      &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)                      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_PLUS   &kp SLASH
+&kp JP_AT       &LangChange    &kp LG(LEFT_ARROW)      &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)                      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_PLUS   &kp SLASH
 &kp LEFT_SHIFT  &kp JP_TILDE   &tkp1                   &kp LG(DOWN_ARROW)  &kp LG(E)                                &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp JP_ASTERISK
-&kp DOLLAR      &kp CARET      &kp HASH                &kp LANG2           &kp LS(LG(S))            &tog_off 7      &kp KP_N0        &kp PERIOD       &kp JP_COLON     &kp JP_TILDE  &kp PERCENT
+&kp DOLLAR      &kp CARET      &kp HASH                &kp LANG2           &kp LS(LG(S))            &tog_off 7      &kp BACKSPACE    &kp KP_NUMBER_0  &kp JP_COLON     &kp JP_TILDE  &kp PERCENT
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
@@ -618,7 +618,7 @@
 &kp QUESTION          &kp DOUBLE_QUOTES      &iOS_PrevApp     &iOS_Show_AllWindow   &iOS_NextApp                      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS   &kp EQUAL
 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &iOS_Split_Left  &iOS_Split_Up         &iOS_Split_Right                  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS    &kp SLASH
 &kp LEFT_SHIFT        &kp TILDE              &iOS_Minimize    &iOS_Split_Down       &iOS_FullScreen                   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD  &kp ASTERISK
-&kp DOLLAR            &kp CARET              &kp HASH         &kp LS(LG(NUMBER_4))  &kp LS(LG(NUMBER_3))  &trans      &kp KP_N0        &kp PERIOD       &kp COLON        &kp TILDE   &kp PERCENT
+&kp DOLLAR            &kp CARET              &kp HASH         &kp LS(LG(NUMBER_4))  &kp LS(LG(NUMBER_3))  &trans      &kp BACKSPACE    &kp KP_N0        &kp COLON        &kp TILDE   &kp PERCENT
             >;
 
             sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
