@@ -168,6 +168,11 @@
             key-positions = <25 26 27>;
             layers = <0>;
         };
+
+        Fn5 {
+            bindings = <&kp F5>;
+            key-positions = <4 3>;
+        };
     };
 
     macros {
